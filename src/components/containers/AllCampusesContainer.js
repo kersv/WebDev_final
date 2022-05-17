@@ -12,7 +12,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import { deleteCampusThunk, fetchAllCampusesThunk } from "../../store/thunks";
 import { AllCampusesView } from "../views";
-import { deleteCampus } from '../../store/actions/actionCreators';
+
 
 class AllCampusesContainer extends Component {
   // Get all campuses data from back-end database

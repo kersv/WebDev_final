@@ -45,10 +45,12 @@ class NewStudentContainer extends Component {
         lastname: this.state.lastname,
         campusId: this.state.campusId,
         imgURL: this.state.imgURL,
-        campusId: this.state.campusId,
+        email: this.state.email,
         gpa: this.state.gpa
     };
-    
+    if(student.imgURL.length === 0){
+      student.imgURL = "https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392?k=20&m=1223671392&s=612x612&w=0&h=lGpj2vWAI3WUT1JeJWm1PRoHT3V15_1pdcTn2szdwQ0="
+    }
     // Add new student in back-end database
     let newStudent = await this.props.addStudent(student);
 
@@ -61,7 +63,7 @@ class NewStudentContainer extends Component {
       redirectId: newStudent.id,
       imgURL: "",
       gpa: "",
-      email: "",
+      email: ""
     });
   }
 
