@@ -20,9 +20,12 @@ class NewStudentContainer extends Component {
     this.state = {
       firstname: "", 
       lastname: "", 
-      campusId: null, 
+      campusId: "", 
       redirect: false, 
-      redirectId: null
+      redirectId: null,
+      imgURL: "",
+      email: "",
+      gpa:""
     };
   }
 
@@ -40,7 +43,10 @@ class NewStudentContainer extends Component {
     let student = {
         firstname: this.state.firstname,
         lastname: this.state.lastname,
-        campusId: this.state.campusId
+        campusId: this.state.campusId,
+        imgURL: this.state.imgURL,
+        campusId: this.state.campusId,
+        gpa: this.state.gpa
     };
     
     // Add new student in back-end database
@@ -52,7 +58,10 @@ class NewStudentContainer extends Component {
       lastname: "", 
       campusId: null, 
       redirect: true, 
-      redirectId: newStudent.id
+      redirectId: newStudent.id,
+      imgURL: "",
+      gpa: "",
+      email: "",
     });
   }
 
